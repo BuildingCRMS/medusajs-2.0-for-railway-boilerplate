@@ -16,7 +16,7 @@ export default async function NavWrapper(props: { countryCode: string }) {
     ])
 
   return (
-    <nav className="duration-400 sticky top-0 z-50 mx-0 max-w-full border-b border-basic-primary bg-primary !py-0 transition-all ease-in-out">
+    <nav className="sticky top-0 z-50 mx-0 max-w-full border-b border-basic-primary bg-primary !py-0 transition-all ease-in-out">
       <div className="mx-auto max-w-[1440px] px-6 flex items-center justify-between !p-0">
         <NavContent
           productCategories={productCategories}

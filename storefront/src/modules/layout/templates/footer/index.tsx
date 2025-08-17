@@ -8,12 +8,12 @@ export default async function Footer({ countryCode }: { countryCode: string }) {
 
   return (
     <footer className="mx-0 max-w-full border-t border-basic-primary bg-static px-0 py-0 small:px-0 small:py-0">
-      <div className="mx-auto max-w-[1440px] px-6 flex flex-col gap-6 text-static small:gap-12">
+              <div className="mx-auto max-w-[1440px] px-6 flex flex-col gap-6 small:gap-12">
         <div className="flex flex-col gap-8 small:gap-12 large:flex-row xl:gap-0">
           <div className="flex flex-col justify-between xl:min-w-[437px]">
             <LocalizedClientLink
               href={`/${countryCode}`}
-              className="w-max cursor-pointer text-static"
+              className="w-max cursor-pointer"
             >
               <h2 className="text-2xl font-bold text-basic-primary">
                 FROSTLORD
@@ -38,18 +38,17 @@ export default async function Footer({ countryCode }: { countryCode: string }) {
                       return null
                     }
 
-                    const children =
-                      c.category_children?.map((child) => ({
-                        name: child.name,
-                        handle: child.handle,
-                        id: child.id,
-                      })) || null
+                    const children = c.category_children?.map((child) => ({
+                      name: child.name,
+                      handle: child.handle,
+                      id: child.id,
+                    })) || null
 
                     return (
                       <div key={c.id} className="flex flex-col gap-2">
                         <LocalizedClientLink
                           href={`/${countryCode}/categories/${c.handle}`}
-                          className="w-max hover:text-static transition-colors duration-200 text-secondary hover:text-secondary/80"
+                          className="w-max hover:text-secondary/80 transition-colors duration-200 text-secondary"
                           data-testid="category-link"
                         >
                           {c.name}
@@ -61,7 +60,7 @@ export default async function Footer({ countryCode }: { countryCode: string }) {
                                 <LocalizedClientLink
                                   key={child.id}
                                   href={`/${countryCode}/categories/${child.handle}`}
-                                  className="hover:text-static transition-colors duration-200 text-secondary hover:text-secondary/80"
+                                  className="hover:text-secondary/80 transition-colors duration-200 text-secondary"
                                   data-testid="category-link"
                                 >
                                   {child.name}
@@ -86,7 +85,7 @@ export default async function Footer({ countryCode }: { countryCode: string }) {
                     <LocalizedClientLink
                       key={c.id}
                       href={`/${countryCode}/collections/${c.handle}`}
-                      className="hover:text-static transition-colors duration-200 text-secondary hover:text-secondary/80"
+                      className="hover:text-secondary/80 transition-colors duration-200 text-secondary"
                     >
                       {c.title}
                     </LocalizedClientLink>
@@ -102,19 +101,19 @@ export default async function Footer({ countryCode }: { countryCode: string }) {
               <div className="grid grid-cols-1 gap-2">
                 <LocalizedClientLink
                   href={`/${countryCode}/about`}
-                  className="hover:text-static transition-colors duration-200 text-secondary hover:text-secondary/80"
+                  className="hover:text-secondary/80 transition-colors duration-200 text-secondary"
                 >
                   About Us
                 </LocalizedClientLink>
                 <LocalizedClientLink
                   href={`/${countryCode}/contact`}
-                  className="hover:text-static transition-colors duration-200 text-secondary hover:text-secondary/80"
+                  className="hover:text-secondary/80 transition-colors duration-200 text-secondary"
                 >
                   Contact
                 </LocalizedClientLink>
                 <LocalizedClientLink
                   href={`/${countryCode}/support`}
-                  className="hover:text-static transition-colors duration-200 text-secondary hover:text-secondary/80"
+                  className="hover:text-secondary/80 transition-colors duration-200 text-secondary"
                 >
                   Support
                 </LocalizedClientLink>
@@ -123,7 +122,7 @@ export default async function Footer({ countryCode }: { countryCode: string }) {
           </div>
         </div>
         
-        <div className="w-full h-px bg-border-secondary" />
+        <div className="w-full h-px bg-border-basic-primary" />
         
         <div className="flex flex-wrap gap-6 gap-y-1">
           <p className="shrink-0 text-secondary">
@@ -132,13 +131,13 @@ export default async function Footer({ countryCode }: { countryCode: string }) {
           <div className="flex gap-6">
             <LocalizedClientLink
               href={`/${countryCode}/privacy`}
-              className="shrink-0 hover:text-static transition-colors duration-200 text-secondary hover:text-secondary/80"
+              className="shrink-0 hover:text-secondary/80 transition-colors duration-200 text-secondary"
             >
               Privacy Policy
             </LocalizedClientLink>
             <LocalizedClientLink
               href={`/${countryCode}/terms`}
-              className="shrink-0 hover:text-static transition-colors duration-200 text-secondary hover:text-secondary/80"
+              className="shrink-0 hover:text-secondary/80 transition-colors duration-200 text-secondary"
             >
               Terms of Service
             </LocalizedClientLink>
