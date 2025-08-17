@@ -2,31 +2,32 @@ import { Metadata } from "next"
 
 import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
-import { getCollectionsWithProducts } from "@lib/data/collections"
+import { getCollectionsList } from "@lib/data/collections"
+import { getProductsList } from "@lib/data/products"
 import { getRegion } from "@lib/data/regions"
 
 export const metadata: Metadata = {
-  title: "FROSTLORD - Premium Products & Style",
+  title: "Medusa Next.js Starter Template",
   description:
-    "Discover premium quality products with unmatched style. FROSTLORD offers a carefully curated selection for discerning customers.",
+    "A performant frontend ecommerce starter template with Next.js 14 and Medusa.",
 }
 
-export default async function Home({
-  params: { countryCode },
-}: {
-  params: { countryCode: string }
-}) {
-  const collections = await getCollectionsWithProducts(countryCode)
-  const region = await getRegion(countryCode)
-
-  if (!collections || !region) {
-    return null
-  }
+export default async function Home() {
+  const { collections } = await getCollectionsList(0, 3)
+  const { products } = await getProductsList({
+    pageParam: 0,
+    queryParams: { limit: 3 },
+  })
+  const region = await getRegion()
 
   return (
     <>
       <Hero />
-      <FeaturedProducts collections={collections} region={region} />
+      <div className="py-12">
+        <ul className="flex flex-col gap-x-6">
+          <FeaturedProducts collections={collections} region={region} />
+        </ul>
+      </div>
     </>
   )
 }
