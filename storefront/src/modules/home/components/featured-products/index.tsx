@@ -1,6 +1,4 @@
 import { HttpTypes } from "@medusajs/types"
-import { Container } from "@modules/common/components/container"
-import { Heading } from "@modules/common/components/heading"
 import ProductRail from "@modules/home/components/featured-products/product-rail"
 
 export default async function FeaturedProducts({
@@ -11,10 +9,10 @@ export default async function FeaturedProducts({
   region: HttpTypes.StoreRegion
 }) {
   return (
-    <Container className="py-12">
-      <Heading className="text-3xl font-bold text-center mb-8">
+    <div className="py-12">
+      <h2 className="text-3xl font-bold text-center mb-8">
         Featured Collections
-      </Heading>
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {collections.map((collection) => (
           <div key={collection.id} className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -22,6 +20,6 @@ export default async function FeaturedProducts({
           </div>
         ))}
       </div>
-    </Container>
+    </div>
   )
 }

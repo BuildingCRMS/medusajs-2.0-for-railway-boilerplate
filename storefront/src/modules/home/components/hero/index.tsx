@@ -1,8 +1,4 @@
-import { Button } from '@modules/common/components/button'
-import { Container } from '@modules/common/components/container'
-import { Heading } from '@modules/common/components/heading'
 import LocalizedClientLink from '@modules/common/components/localized-client-link'
-import { Text } from '@modules/common/components/text'
 
 const Hero = () => {
   return (
@@ -20,24 +16,21 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <Container className="flex flex-col gap-2 !py-6 small:gap-8 small:!py-10">
-        <Heading className="max-w-full text-4xl text-basic-primary small:max-w-[510px] medium:text-5xl">
+      <div className="mx-auto max-w-[1440px] px-6 flex flex-col gap-2 py-6 small:gap-8 small:py-10">
+        <h2 className="max-w-full text-4xl text-basic-primary small:max-w-[510px] medium:text-5xl font-medium">
           Premium Quality, Unmatched Style
-        </Heading>
+        </h2>
         <div className="flex flex-col-reverse justify-between gap-8 medium:flex-row medium:items-center">
-          <Button asChild className="w-max">
+          <button className="inline-flex items-center justify-center rounded-md font-medium transition-colors bg-basic-primary text-inverse-primary hover:bg-basic-primary/90 h-10 px-4 py-2 w-max">
             <LocalizedClientLink href="/shop">
               Shop Now
             </LocalizedClientLink>
-          </Button>
-          <Text
-            size="lg"
-            className="max-w-full text-basic-primary medium:max-w-[410px] medium:text-end"
-          >
+          </button>
+          <p className="max-w-full text-basic-primary medium:max-w-[410px] medium:text-end text-lg">
             Experience the difference with our carefully curated selection of premium products designed for those who appreciate quality and style.
-          </Text>
+          </p>
         </div>
-      </Container>
+      </div>
     </>
   )
 }
