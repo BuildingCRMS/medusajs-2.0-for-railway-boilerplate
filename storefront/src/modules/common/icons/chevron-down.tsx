@@ -2,29 +2,23 @@ import React from "react"
 
 import { IconProps } from "types/icon"
 
-const ChevronDown: React.FC<IconProps> = ({
-  size = "16",
-  color = "currentColor",
-  ...attributes
-}) => {
+export function ChevronDownIcon() {
   return (
     <svg
-      width={size}
-      height={size}
-      viewBox="0 0 16 16"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...attributes}
+      className="transition-transform duration-200"
     >
       <path
-        d="M4 6L8 10L12 6"
-        stroke={color}
-        strokeWidth="1.5"
+        d="M6 9L12 15L18 9"
+        stroke="currentColor"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
     </svg>
   )
 }
-
-export default ChevronDown
