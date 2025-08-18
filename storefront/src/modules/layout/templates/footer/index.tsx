@@ -10,13 +10,13 @@ export default async function Footer() {
   const { product_categories } = await getCategoriesList(0, 6)
 
   return (
-    <footer className="border-t-4 border-amber-500 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white w-full shadow-2xl">
+    <footer className="border-t-4 border-frostlord-platinum bg-gradient-to-br from-frostlord-midnight via-gray-800 to-black text-white w-full shadow-2xl">
       <div className="content-container flex flex-col w-full">
         <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
           <div>
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus text-amber-400 hover:text-amber-300 uppercase font-bold tracking-wider"
+              className="txt-compact-xlarge-plus text-frostlord-ice hover:text-frostlord-sapphire uppercase font-bold tracking-wider"
             >
               FROSTLORD
             </LocalizedClientLink>
@@ -24,7 +24,7 @@ export default async function Footer() {
           <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
             {product_categories && product_categories?.length > 0 && (
               <div className="flex flex-col gap-y-2">
-                <span className="txt-small-plus text-amber-400">
+                <span className="txt-small-plus text-frostlord-ice">
                   Categories
                 </span>
                 <ul
@@ -82,7 +82,7 @@ export default async function Footer() {
             )}
             {collections && collections.length > 0 && (
               <div className="flex flex-col gap-y-2">
-                <span className="txt-small-plus text-amber-400">
+                <span className="txt-small-plus text-frostlord-ice">
                   Collections
                 </span>
                 <ul

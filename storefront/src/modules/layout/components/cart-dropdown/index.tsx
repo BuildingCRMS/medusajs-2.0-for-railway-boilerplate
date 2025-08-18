@@ -95,7 +95,7 @@ const CartDropdown = ({
         >
           <Popover.Panel
             static
-            className="hidden small:block absolute top-[calc(100%+1px)] right-0 bg-white border-x border-b border-gray-200 w-[420px] text-ui-fg-base"
+            className="hidden small:block absolute top-[calc(100%+1px)] right-0 bg-white border-x border-b border-frostlord-platinum w-[420px] text-frostlord-midnight"
             data-testid="nav-cart-dropdown"
           >
             <div className="p-4 flex items-center justify-center">
@@ -168,12 +168,12 @@ const CartDropdown = ({
                 </div>
                 <div className="p-4 flex flex-col gap-y-4 text-small-regular">
                   <div className="flex items-center justify-between">
-                    <span className="text-ui-fg-base font-semibold">
+                    <span className="text-frostlord-midnight font-semibold">
                       Subtotal{" "}
-                      <span className="font-normal">(excl. taxes)</span>
+                      <span className="font-normal text-frostlord-platinum">(excl. taxes)</span>
                     </span>
                     <span
-                      className="text-large-semi"
+                      className="text-large-semi text-frostlord-sapphire"
                       data-testid="cart-subtotal"
                       data-value={subtotal}
                     >
@@ -185,7 +185,7 @@ const CartDropdown = ({
                   </div>
                   <LocalizedClientLink href="/cart" passHref>
                     <Button
-                      className="w-full"
+                      className="w-full bg-frostlord-ice text-frostlord-midnight border border-frostlord-platinum hover:bg-frostlord-sapphire hover:text-white"
                       size="large"
                       data-testid="go-to-cart-button"
                     >
@@ -205,7 +205,9 @@ const CartDropdown = ({
                     <LocalizedClientLink href="/store">
                       <>
                         <span className="sr-only">Go to all products page</span>
-                        <Button onClick={close}>Explore products</Button>
+                        <Button onClick={close} className="bg-frostlord-ice text-frostlord-midnight border border-frostlord-platinum hover:bg-frostlord-sapphire hover:text-white">
+                          Explore products
+                        </Button>
                       </>
                     </LocalizedClientLink>
                   </div>

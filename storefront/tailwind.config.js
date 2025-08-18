@@ -34,6 +34,14 @@ module.exports = {
           80: "#1F2937",
           90: "#111827",
         },
+        frostlord: {
+          ice: "#A7D8F0", // Ice Blue (Main / Hero)
+          frost: "#F5F9FC", // Frost White (Background)
+          platinum: "#C0C7D1", // Platinum Silver (Accent)
+          diamond: "#E4F1FB", // Diamond Glow (Highlight)
+          midnight: "#0D0D0F", // Midnight Black (Contrast)
+          sapphire: "#2566A6", // Royal Sapphire (Accent)
+        },
       },
       borderRadius: {
         none: "0px",

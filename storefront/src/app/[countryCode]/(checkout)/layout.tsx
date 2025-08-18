@@ -8,8 +8,8 @@ export default function CheckoutLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="w-full bg-white relative small:min-h-screen">
-      <div className="h-16 bg-white border-b ">
+    <div className="w-full bg-frostlord-frost relative small:min-h-screen">
+      <div className="h-16 bg-frostlord-frost border-b border-frostlord-platinum ">
         <nav className="flex h-full items-center content-container justify-between">
           <LocalizedClientLink
             href="/cart"
@@ -26,7 +26,7 @@ export default function CheckoutLayout({
           </LocalizedClientLink>
                       <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus text-amber-600 hover:text-amber-700 uppercase font-bold tracking-wider bg-gradient-to-r from-amber-600 to-yellow-600 bg-clip-text text-transparent hover:from-amber-700 hover:to-yellow-700 transition-all duration-300"
+              className="txt-compact-xlarge-plus uppercase font-bold tracking-wider bg-gradient-to-r from-frostlord-sapphire to-frostlord-ice bg-clip-text text-transparent hover:from-frostlord-sapphire hover:to-frostlord-sapphire transition-all duration-300"
               data-testid="store-link"
             >
               FROSTLORD

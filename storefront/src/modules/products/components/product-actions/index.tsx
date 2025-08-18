@@ -139,7 +139,7 @@ export default function ProductActions({
           onClick={handleAddToCart}
           disabled={!inStock || !selectedVariant || !!disabled || isAdding}
           variant="primary"
-          className="w-full h-10"
+          className="w-full h-10 bg-frostlord-ice text-frostlord-midnight border border-frostlord-platinum hover:bg-frostlord-sapphire hover:text-white"
           isLoading={isAdding}
           data-testid="add-product-button"
         >
