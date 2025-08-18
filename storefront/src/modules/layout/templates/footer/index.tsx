@@ -10,21 +10,21 @@ export default async function Footer() {
   const { product_categories } = await getCategoriesList(0, 6)
 
   return (
-    <footer className="border-t border-ui-border-base w-full">
+    <footer className="border-t-4 border-amber-500 bg-gray-900 text-white w-full">
       <div className="content-container flex flex-col w-full">
         <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
           <div>
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
+              className="txt-compact-xlarge-plus text-amber-400 hover:text-amber-300 uppercase font-bold tracking-wider"
             >
-              Medusa Store
+              FROSTLORD
             </LocalizedClientLink>
           </div>
           <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
             {product_categories && product_categories?.length > 0 && (
               <div className="flex flex-col gap-y-2">
-                <span className="txt-small-plus txt-ui-fg-base">
+                <span className="txt-small-plus text-amber-400">
                   Categories
                 </span>
                 <ul
@@ -82,7 +82,7 @@ export default async function Footer() {
             )}
             {collections && collections.length > 0 && (
               <div className="flex flex-col gap-y-2">
-                <span className="txt-small-plus txt-ui-fg-base">
+                <span className="txt-small-plus text-amber-400">
                   Collections
                 </span>
                 <ul
@@ -143,10 +143,10 @@ export default async function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
-          <Text className="txt-compact-small">
-            © {new Date().getFullYear()} Medusa Store. All rights reserved.
-          </Text>
+                  <div className="flex w-full mb-16 justify-between text-gray-400">
+            <Text className="txt-compact-small">
+              © {new Date().getFullYear()} FROSTLORD. All rights reserved.
+            </Text>
           <MedusaCTA />
         </div>
       </div>

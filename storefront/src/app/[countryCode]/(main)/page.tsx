@@ -6,9 +6,9 @@ import { getCollectionsWithProducts } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
 
 export const metadata: Metadata = {
-  title: "Medusa Next.js Starter Template",
+  title: "FROSTLORD - Luxury Iced Out Watches",
   description:
-    "A performant frontend ecommerce starter template with Next.js 14 and Medusa.",
+    "Premium luxury iced out watches with the finest diamonds and craftsmanship. Discover your perfect timepiece at FROSTLORD.",
 }
 
 export default async function Home({

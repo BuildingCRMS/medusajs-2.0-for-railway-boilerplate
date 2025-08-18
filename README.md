@@ -16,10 +16,10 @@
 </p>
 
 <h2 align="center">
-  Prebaked medusajs 2.0 monorepo
+  FROSTLORD Luxury Watch Store
 </h2>
 <h4 align="center">
-  Backend + Storefront + postgres + redis + MinIO + MeiliSearch
+  Premium iced out watches with luxury e-commerce platform
 </h4>
 
 <h2 align="center">
@@ -32,10 +32,10 @@
 </h1>
 
 <p align="center">
-Combine Medusa's modules for your commerce backend with the newest Next.js 14 features for a performant storefront.</p>
+Premium luxury iced out watches with the finest diamonds and craftsmanship. Built with Next.js 14 and modern e-commerce technology.</p>
 
-## About this boilerplate
-This boilerplate is a monorepo consisting of the officially released MedusaJS 2.0 backend and storefront application. It is a pre-configured, ready-to-deploy solution, modified for seamless deployment on [railway.app](https://railway.app?referralCode=-Yg50p).
+## About FROSTLORD
+FROSTLORD is a luxury watch brand specializing in premium iced out timepieces. This platform combines cutting-edge e-commerce technology with the finest craftsmanship to deliver an exceptional shopping experience for luxury watch enthusiasts.
 
 Updated: to `version 2.8.8` 🥳
 
