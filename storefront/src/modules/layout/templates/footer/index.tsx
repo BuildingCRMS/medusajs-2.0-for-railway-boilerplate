@@ -10,7 +10,7 @@ export default async function Footer() {
   const { product_categories } = await getCategoriesList(0, 6)
 
   return (
-    <footer className="border-t-4 border-amber-500 bg-gray-900 text-white w-full">
+    <footer className="border-t-4 border-amber-500 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white w-full shadow-2xl">
       <div className="content-container flex flex-col w-full">
         <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
           <div>

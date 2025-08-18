@@ -24,13 +24,13 @@ export default function CheckoutLayout({
               Back
             </span>
           </LocalizedClientLink>
-          <LocalizedClientLink
-            href="/"
-            className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
-            data-testid="store-link"
-          >
-            FROSTLORD
-          </LocalizedClientLink>
+                      <LocalizedClientLink
+              href="/"
+              className="txt-compact-xlarge-plus text-amber-600 hover:text-amber-700 uppercase font-bold tracking-wider bg-gradient-to-r from-amber-600 to-yellow-600 bg-clip-text text-transparent hover:from-amber-700 hover:to-yellow-700 transition-all duration-300"
+              data-testid="store-link"
+            >
+              FROSTLORD
+            </LocalizedClientLink>
           <div className="flex-1 basis-0" />
         </nav>
       </div>
