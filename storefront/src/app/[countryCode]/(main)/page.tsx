@@ -2,8 +2,7 @@ import { Metadata } from "next"
 
 import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
-import { getCollectionsList } from "@lib/data/collections"
-import { getProductsList } from "@lib/data/products"
+import { getCollectionsWithProducts } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
 
 export const metadata: Metadata = {
@@ -12,13 +11,17 @@ export const metadata: Metadata = {
     "A performant frontend ecommerce starter template with Next.js 14 and Medusa.",
 }
 
-export default async function Home() {
-  const { collections } = await getCollectionsList(0, 3)
-  const { products } = await getProductsList({
-    pageParam: 0,
-    queryParams: { limit: 3 },
-  })
-  const region = await getRegion()
+export default async function Home({
+  params: { countryCode },
+}: {
+  params: { countryCode: string }
+}) {
+  const collections = await getCollectionsWithProducts(countryCode)
+  const region = await getRegion(countryCode)
+
+  if (!collections || !region) {
+    return null
+  }
 
   return (
     <>

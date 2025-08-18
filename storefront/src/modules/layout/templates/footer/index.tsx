@@ -37,7 +37,7 @@ export default async function Footer() {
                     }
 
                     const children =
-                      c.category_children?.map((child: { name: string; handle: string; id: string }) => ({
+                      c.category_children?.map((child) => ({
                         name: child.name,
                         handle: child.handle,
                         id: child.id,

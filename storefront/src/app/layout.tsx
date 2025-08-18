@@ -1,9 +1,9 @@
-import type { Metadata } from "next"
+import { getBaseURL } from "@lib/util/env"
+import { Metadata } from "next"
 import "styles/globals.css"
 
 export const metadata: Metadata = {
-  title: "Medusa Next.js Starter Template",
-  description: "A performant frontend ecommerce starter template with Next.js 14 and Medusa.",
+  metadataBase: new URL(getBaseURL()),
 }
 
 export default function RootLayout(props: { children: React.ReactNode }) {
