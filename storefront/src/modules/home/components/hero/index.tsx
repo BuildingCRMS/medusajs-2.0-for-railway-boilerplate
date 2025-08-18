@@ -3,9 +3,9 @@ import InteractiveLink from "@modules/common/components/interactive-link"
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden">
-      {/* Background Placeholder with Frost Lord Theme */}
-      <div className="absolute inset-0 bg-gradient-to-br from-frostlord-ice via-frostlord-diamond to-frostlord-frost">
+    <div className="relative w-full overflow-hidden">
+      {/* Background Placeholder with Frost Lord Theme - Full Viewport */}
+      <div className="fixed inset-0 bg-gradient-to-br from-frostlord-ice via-frostlord-diamond to-frostlord-frost -z-10">
         {/* Abstract geometric patterns for visual interest */}
         <div className="absolute top-0 left-0 w-48 h-48 small:w-96 small:h-96 bg-frostlord-platinum/20 rounded-full blur-2xl small:blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-40 h-40 small:w-80 small:h-80 bg-frostlord-sapphire/10 rounded-full blur-2xl small:blur-3xl translate-x-1/2 translate-y-1/2"></div>
@@ -53,7 +53,7 @@ const Hero = () => {
               className="bg-frostlord-sapphire hover:bg-frostlord-midnight text-white hover:text-frostlord-ice px-8 py-4 small:px-12 small:py-5 text-lg small:text-xl font-semibold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
               asChild
             >
-              <a href="https://www.frostlord.shop/us/products" target="_blank" rel="noopener noreferrer">
+              <a href="https://frostlord.shop/us/store" target="_blank" rel="noopener noreferrer">
                 Shop Now
               </a>
             </Button>
