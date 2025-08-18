@@ -19,24 +19,34 @@ const StoreTemplate = ({
   const sort = sortBy || "created_at"
 
   return (
-    <div
-      className="flex flex-col small:flex-row small:items-start py-6 content-container"
-      data-testid="category-container"
-    >
-      <RefinementList sortBy={sort} />
-      <div className="w-full">
-        <div className="mb-8 text-2xl-semi">
-          <h1 data-testid="store-page-title">All products</h1>
-        </div>
-        <Suspense fallback={<SkeletonProductGrid />}>
-          <PaginatedProducts
-            sortBy={sort}
-            page={pageNumber}
-            countryCode={countryCode}
-          />
-        </Suspense>
+    <>
+      {/* Frost Lord Gradient Background */}
+      <div className="fixed inset-0 bg-gradient-to-br from-frostlord-ice via-frostlord-diamond to-frostlord-frost -z-10">
+        {/* Abstract geometric patterns for visual interest */}
+        <div className="absolute top-0 left-0 w-48 h-48 small:w-96 small:h-96 bg-frostlord-platinum/20 rounded-full blur-2xl small:blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-40 h-40 small:w-80 small:h-80 bg-frostlord-sapphire/10 rounded-full blur-2xl small:blur-3xl translate-x-1/2 translate-y-1/2"></div>
+        <div className="absolute top-1/2 left-1/2 w-32 h-32 small:w-64 small:h-64 bg-frostlord-ice/30 rounded-full blur-xl small:blur-2xl -translate-x-1/2 -translate-y-1/2"></div>
       </div>
-    </div>
+
+      <div
+        className="flex flex-col small:flex-row small:items-start py-6 content-container relative z-10"
+        data-testid="category-container"
+      >
+        <RefinementList sortBy={sort} />
+        <div className="w-full">
+          <div className="mb-8 text-2xl-semi">
+            <h1 data-testid="store-page-title" className="text-frostlord-midnight">New Watches</h1>
+          </div>
+          <Suspense fallback={<SkeletonProductGrid />}>
+            <PaginatedProducts
+              sortBy={sort}
+              page={pageNumber}
+              countryCode={countryCode}
+            />
+          </Suspense>
+        </div>
+      </div>
+    </>
   )
 }
 
