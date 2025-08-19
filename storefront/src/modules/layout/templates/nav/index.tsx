@@ -5,6 +5,7 @@ import { StoreRegion } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
+import Image from "next/image"
 
 export default async function Nav() {
   const regions = await listRegions().then((regions: StoreRegion[]) => regions)
@@ -22,10 +23,17 @@ export default async function Nav() {
           <div className="flex items-center h-full">
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus hover:text-frostlord-sapphire uppercase font-bold tracking-wider bg-gradient-to-r from-frostlord-sapphire to-frostlord-ice bg-clip-text text-transparent hover:from-frostlord-sapphire hover:to-frostlord-sapphire transition-all duration-300"
+              className="flex items-center h-full px-4 hover:opacity-80 transition-opacity duration-300"
               data-testid="nav-store-link"
             >
-              FROSTLORD
+              <Image
+                src="/Logo.png"
+                alt="FROSTLORD Logo"
+                width={120}
+                height={40}
+                className="h-10 w-auto object-contain"
+                priority
+              />
             </LocalizedClientLink>
           </div>
 

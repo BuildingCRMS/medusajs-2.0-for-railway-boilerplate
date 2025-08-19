@@ -1,6 +1,7 @@
 import { getCategoriesList } from "@lib/data/categories"
 import { getCollectionsList } from "@lib/data/collections"
 import { Text, clx } from "@medusajs/ui"
+import Image from "next/image"
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
@@ -16,9 +17,16 @@ export default async function Footer() {
           <div>
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus text-frostlord-ice hover:text-frostlord-sapphire uppercase font-bold tracking-wider"
+              className="flex items-center hover:opacity-80 transition-opacity duration-300"
             >
-              FROSTLORD
+              <Image
+                src="/Logo.png"
+                alt="FROSTLORD Logo"
+                width={140}
+                height={50}
+                className="h-12 w-auto object-contain"
+                priority
+              />
             </LocalizedClientLink>
           </div>
           <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">

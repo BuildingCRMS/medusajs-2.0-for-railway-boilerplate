@@ -1,5 +1,6 @@
 import { Button, Heading, Text } from "@medusajs/ui"
 import InteractiveLink from "@modules/common/components/interactive-link"
+import Image from "next/image"
 
 const Hero = () => {
   return (
@@ -15,6 +16,18 @@ const Hero = () => {
       {/* Content Overlay */}
       <div className="relative z-10 flex flex-col justify-center items-center min-h-screen text-center px-6 py-12 small:py-24">
         <div className="content-container max-w-6xl mx-auto">
+          {/* Logo Display */}
+          <div className="mb-8 flex justify-center">
+            <Image
+              src="/Logo.png"
+              alt="FROSTLORD Logo"
+              width={200}
+              height={80}
+              className="h-20 small:h-24 w-auto object-contain drop-shadow-2xl"
+              priority
+            />
+          </div>
+
           {/* Main Branding */}
           <div className="mb-8 small:mb-12">
             <Heading
