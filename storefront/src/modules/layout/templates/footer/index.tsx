@@ -22,9 +22,9 @@ export default async function Footer() {
               <Image
                 src="/Logo.png"
                 alt="FROSTLORD Logo"
-                width={140}
-                height={50}
-                className="h-12 w-auto object-contain"
+                width={200}
+                height={80}
+                className="h-20 w-auto object-contain"
                 priority
               />
             </LocalizedClientLink>

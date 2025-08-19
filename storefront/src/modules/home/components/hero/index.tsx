@@ -16,33 +16,27 @@ const Hero = () => {
       {/* Content Overlay */}
       <div className="relative z-10 flex flex-col justify-center items-center min-h-screen text-center px-6 py-12 small:py-24">
         <div className="content-container max-w-6xl mx-auto">
-          {/* Logo Display */}
-          <div className="mb-8 flex justify-center">
+          {/* Logo Display - Main Focal Point */}
+          <div className="mb-16 flex justify-center">
             <Image
               src="/Logo.png"
               alt="FROSTLORD Logo"
-              width={200}
-              height={80}
-              className="h-20 small:h-24 w-auto object-contain drop-shadow-2xl"
+              width={400}
+              height={160}
+              className="h-40 small:h-48 medium:h-56 w-auto object-contain drop-shadow-2xl"
               priority
             />
           </div>
 
-          {/* Main Branding */}
+          {/* Tagline */}
           <div className="mb-8 small:mb-12">
-            <Heading
-              level="h1"
-              className="text-4xl leading-tight small:text-6xl medium:text-7xl large:text-8xl font-bold text-frostlord-midnight mb-4 small:mb-6 tracking-tight"
-            >
-              FROSTLORD
-            </Heading>
-            <div className="w-16 h-1 small:w-24 bg-frostlord-sapphire mx-auto mb-6 small:mb-8"></div>
             <Heading
               level="h2"
               className="text-lg leading-relaxed small:text-xl medium:text-2xl large:text-3xl font-light text-frostlord-midnight/80 mb-6 small:mb-8 max-w-3xl mx-auto"
             >
               Luxury Iced Out Watches with Unparalleled Craftsmanship
             </Heading>
+            <div className="w-16 h-1 small:w-24 bg-frostlord-sapphire mx-auto mb-6 small:mb-8"></div>
           </div>
 
           {/* Brand Description */}
