@@ -12,7 +12,7 @@ export default async function Nav() {
 
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
-      <header className="relative h-20 mx-auto border-b-2 duration-200 bg-frostlord-frost backdrop-blur-md border-frostlord-platinum shadow-lg">
+      <header className="relative h-24 mx-auto border-b-2 duration-200 bg-frostlord-frost backdrop-blur-md border-frostlord-platinum shadow-lg">
         <nav className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
           <div className="flex-1 basis-0 h-full flex items-center">
             <div className="h-full">
@@ -23,22 +23,22 @@ export default async function Nav() {
           <div className="flex items-center h-full">
             <LocalizedClientLink
               href="/"
-              className="flex items-center h-full px-4 hover:opacity-80 transition-opacity duration-300"
+              className="flex items-center h-full px-6 hover:opacity-80 transition-opacity duration-300"
               data-testid="nav-store-link"
             >
               <Image
                 src="/Logo.png"
                 alt="FROSTLORD Logo"
-                width={200}
-                height={80}
-                className="h-16 w-auto object-contain"
+                width={250}
+                height={100}
+                className="h-20 w-auto object-contain"
                 priority
               />
             </LocalizedClientLink>
           </div>
 
-          <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
-            <div className="hidden small:flex items-center gap-x-6 h-full">
+          <div className="flex items-center gap-x-8 h-full flex-1 basis-0 justify-end">
+            <div className="hidden small:flex items-center gap-x-8 h-full">
               {process.env.NEXT_PUBLIC_FEATURE_SEARCH_ENABLED && (
                 <LocalizedClientLink
                   className="hover:text-ui-fg-base"
