@@ -26,14 +26,18 @@ export default async function Nav() {
               className="flex items-center h-full px-4 hover:opacity-80 transition-opacity duration-300"
               data-testid="nav-store-link"
             >
-              <Image
-                src="https://github.com/BuildingCRMS/medusajs-2.0-for-railway-boilerplate/blob/main/storefront/public/Frostlord%20Watch%20and%20Graffiti%20Design.png?raw=true"
-                alt="FROSTLORD Logo"
-                width={120}
-                height={40}
-                className="h-10 w-auto object-contain"
-                priority
-              />
+              <div className="relative h-10 w-32">
+                <Image
+                  src="https://raw.githubusercontent.com/BuildingCRMS/medusajs-2.0-for-railway-boilerplate/main/storefront/public/Frostlord%20Watch%20and%20Graffiti%20Design.png"
+                  alt="FROSTLORD Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                  onError={(e) => {
+                    console.error('Logo failed to load:', e);
+                  }}
+                />
+              </div>
             </LocalizedClientLink>
           </div>
 

@@ -19,14 +19,18 @@ export default async function Footer() {
               href="/"
               className="flex items-center hover:opacity-80 transition-opacity duration-300"
             >
-              <Image
-                src="https://github.com/BuildingCRMS/medusajs-2.0-for-railway-boilerplate/blob/main/storefront/public/Frostlord%20Watch%20and%20Graffiti%20Design.png?raw=true"
-                alt="FROSTLORD Logo"
-                width={140}
-                height={50}
-                className="h-12 w-auto object-contain"
-                priority
-              />
+              <div className="relative h-12 w-36">
+                <Image
+                  src="https://raw.githubusercontent.com/BuildingCRMS/medusajs-2.0-for-railway-boilerplate/main/storefront/public/Frostlord%20Watch%20and%20Graffiti%20Design.png"
+                  alt="FROSTLORD Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                  onError={(e) => {
+                    console.error('Footer logo failed to load:', e);
+                  }}
+                />
+              </div>
             </LocalizedClientLink>
           </div>
           <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
@@ -74,7 +78,6 @@ export default async function Footer() {
                                   <LocalizedClientLink
                                     className="hover:text-ui-fg-base"
                                     href={`/categories/${child.handle}`}
-                                    data-testid="category-link"
                                   >
                                     {child.name}
                                   </LocalizedClientLink>
