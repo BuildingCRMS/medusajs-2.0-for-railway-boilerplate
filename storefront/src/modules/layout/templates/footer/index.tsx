@@ -1,7 +1,6 @@
 import { getCategoriesList } from "@lib/data/categories"
 import { getCollectionsList } from "@lib/data/collections"
 import { Text, clx } from "@medusajs/ui"
-import Image from "next/image"
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
@@ -17,20 +16,9 @@ export default async function Footer() {
           <div>
             <LocalizedClientLink
               href="/"
-              className="flex items-center hover:opacity-80 transition-opacity duration-300"
+              className="txt-compact-xlarge-plus text-frostlord-ice hover:text-frostlord-sapphire uppercase font-bold tracking-wider"
             >
-              <div className="relative h-12 w-36">
-                <Image
-                  src="https://raw.githubusercontent.com/BuildingCRMS/medusajs-2.0-for-railway-boilerplate/main/storefront/public/Frostlord%20Watch%20and%20Graffiti%20Design.png"
-                  alt="FROSTLORD Logo"
-                  fill
-                  className="object-contain"
-                  priority
-                  onError={(e) => {
-                    console.error('Footer logo failed to load:', e);
-                  }}
-                />
-              </div>
+              FROSTLORD
             </LocalizedClientLink>
           </div>
           <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">

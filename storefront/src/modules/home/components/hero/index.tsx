@@ -1,6 +1,5 @@
 import { Button, Heading, Text } from "@medusajs/ui"
 import InteractiveLink from "@modules/common/components/interactive-link"
-import Image from "next/image"
 
 const Hero = () => {
   return (
@@ -16,22 +15,6 @@ const Hero = () => {
       {/* Content Overlay */}
       <div className="relative z-10 flex flex-col justify-center items-center min-h-screen text-center px-6 py-12 small:py-24">
         <div className="content-container max-w-6xl mx-auto">
-          {/* Logo Display */}
-          <div className="mb-8 flex justify-center">
-            <div className="relative h-20 small:h-24 w-48 small:w-56">
-              <Image
-                src="https://raw.githubusercontent.com/BuildingCRMS/medusajs-2.0-for-railway-boilerplate/main/storefront/public/Frostlord%20Watch%20and%20Graffiti%20Design.png"
-                alt="FROSTLORD Logo"
-                fill
-                className="object-contain drop-shadow-2xl"
-                priority
-                onError={(e) => {
-                  console.error('Hero logo failed to load:', e);
-                }}
-              />
-            </div>
-          </div>
-
           {/* Main Branding */}
           <div className="mb-8 small:mb-12">
             <Heading
