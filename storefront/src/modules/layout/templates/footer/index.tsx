@@ -1,6 +1,7 @@
 import { getCategoriesList } from "@lib/data/categories"
 import { getCollectionsList } from "@lib/data/collections"
 import { Text, clx } from "@medusajs/ui"
+import Image from "next/image"
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
@@ -16,9 +17,16 @@ export default async function Footer() {
           <div>
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus text-frostlord-ice hover:text-frostlord-sapphire uppercase font-bold tracking-wider"
+              className="flex items-center hover:opacity-80 transition-opacity duration-300"
             >
-              FROSTLORD
+              <Image
+                src="https://github.com/BuildingCRMS/medusajs-2.0-for-railway-boilerplate/blob/main/storefront/public/Frostlord%20Watch%20and%20Graffiti%20Design.png?raw=true"
+                alt="FROSTLORD Logo"
+                width={140}
+                height={50}
+                className="h-12 w-auto object-contain"
+                priority
+              />
             </LocalizedClientLink>
           </div>
           <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
@@ -113,7 +121,7 @@ export default async function Footer() {
                   <a
                     href="https://github.com/medusajs"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="hover:text-ui-fg-base"
                   >
                     GitHub
@@ -123,7 +131,7 @@ export default async function Footer() {
                   <a
                     href="https://docs.medusajs.com"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="hover:text-ui-fg-base"
                   >
                     Documentation
@@ -133,7 +141,7 @@ export default async function Footer() {
                   <a
                     href="https://github.com/medusajs/nextjs-starter-medusa"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="hover:text-ui-fg-base"
                   >
                     Source code
@@ -143,10 +151,10 @@ export default async function Footer() {
             </div>
           </div>
         </div>
-                  <div className="flex w-full mb-16 justify-between text-gray-400">
-            <Text className="txt-compact-small">
-              © {new Date().getFullYear()} FROSTLORD. All rights reserved.
-            </Text>
+        <div className="flex w-full mb-16 justify-between text-gray-400">
+          <Text className="txt-compact-small">
+            © {new Date().getFullYear()} FROSTLORD. All rights reserved.
+          </Text>
           <MedusaCTA />
         </div>
       </div>

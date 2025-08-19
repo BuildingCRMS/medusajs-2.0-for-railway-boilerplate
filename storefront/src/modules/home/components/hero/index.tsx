@@ -1,11 +1,12 @@
 import { Button, Heading, Text } from "@medusajs/ui"
 import InteractiveLink from "@modules/common/components/interactive-link"
+import Image from "next/image"
 
 const Hero = () => {
   return (
-    <div className="relative w-full overflow-hidden">
-      {/* Background Placeholder with Frost Lord Theme - Full Viewport */}
-      <div className="fixed inset-0 bg-gradient-to-br from-frostlord-ice via-frostlord-diamond to-frostlord-frost -z-10">
+    <div className="relative min-h-screen w-full overflow-hidden">
+      {/* Background Placeholder with Frost Lord Theme */}
+      <div className="absolute inset-0 bg-gradient-to-br from-frostlord-ice via-frostlord-diamond to-frostlord-frost">
         {/* Abstract geometric patterns for visual interest */}
         <div className="absolute top-0 left-0 w-48 h-48 small:w-96 small:h-96 bg-frostlord-platinum/20 rounded-full blur-2xl small:blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-40 h-40 small:w-80 small:h-80 bg-frostlord-sapphire/10 rounded-full blur-2xl small:blur-3xl translate-x-1/2 translate-y-1/2"></div>
@@ -15,6 +16,18 @@ const Hero = () => {
       {/* Content Overlay */}
       <div className="relative z-10 flex flex-col justify-center items-center min-h-screen text-center px-6 py-12 small:py-24">
         <div className="content-container max-w-6xl mx-auto">
+          {/* Logo Display */}
+          <div className="mb-8 flex justify-center">
+            <Image
+              src="https://github.com/BuildingCRMS/medusajs-2.0-for-railway-boilerplate/blob/main/storefront/public/Frostlord%20Watch%20and%20Graffiti%20Design.png?raw=true"
+              alt="FROSTLORD Logo"
+              width={200}
+              height={80}
+              className="h-20 small:h-24 w-auto object-contain drop-shadow-2xl"
+              priority
+            />
+          </div>
+
           {/* Main Branding */}
           <div className="mb-8 small:mb-12">
             <Heading
