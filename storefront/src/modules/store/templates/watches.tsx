@@ -6,7 +6,7 @@ import { SortOptions } from "@modules/store/components/refinement-list/sort-prod
 
 import PaginatedProducts from "./paginated-products"
 
-const StoreTemplate = ({
+const WatchesTemplate = ({
   sortBy,
   page,
   countryCode,
@@ -30,12 +30,19 @@ const StoreTemplate = ({
 
       <div
         className="flex flex-col small:flex-row small:items-start py-6 content-container relative z-10"
-        data-testid="category-container"
+        data-testid="watches-container"
       >
         <RefinementList sortBy={sort} />
         <div className="w-full">
           <div className="mb-8 text-2xl-semi">
-            <h1 data-testid="store-page-title" className="text-frostlord-midnight">All products</h1>
+            <h1 data-testid="watches-page-title" className="text-frostlord-midnight text-4xl small:text-5xl font-bold">
+              ICED OUT WATCHES
+            </h1>
+            <p className="text-frostlord-midnight/70 text-lg small:text-xl mt-4 max-w-3xl">
+              Discover our exclusive collection of luxury timepieces featuring the finest diamonds, 
+              premium materials, and unparalleled craftsmanship. Each watch is a masterpiece of 
+              sophistication and precision.
+            </p>
           </div>
           <Suspense fallback={<SkeletonProductGrid />}>
             <PaginatedProducts
@@ -50,4 +57,4 @@ const StoreTemplate = ({
   )
 }
 
-export default StoreTemplate
+export default WatchesTemplate
